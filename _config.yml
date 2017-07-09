@@ -16,14 +16,14 @@ author: 'Will Weaver'
 nickname: funkymonkeymonk
 bio: ''
 location: 'New York, USA'
-url: 'http://buildingbananas.com/learning-the-sword/'
+url: 'http://learningthesword.com/'
 image: 'assets/images/casper.png'
 
-short_url: 'buildingbananas.com/learning-the-sword/'
+short_url: 'learningthesword.com/'
 google_analytics:
 disqus: funkymonkeymonk
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /learning-the-sword/
+baseurl: /
 
 # Permalinks
 permalink: /:title
@@ -60,7 +60,7 @@ username: funkymonkeymonk
 repo: learning-the-sword
 # relative_source: .
 destination: ./_site/
-production_url:  http://buildingbananas.com/learning-the-sword/
+production_url:  http://learningthesword.com/
 source_url:      https://github.com/funkymonkeymonk/learning-the-sword/
 
 exclude:
