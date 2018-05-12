@@ -1,12 +1,28 @@
-JEKYLL_VERSION=pages
+build:
+	@docker build -t buildingbananas/learning-the-sword .
 
-serve:
-	@docker run --rm \
-		-p 4000:4000 \
-		--volume=`pwd`:/srv/jekyll \
-		-it jekyll/jekyll:$(JEKYLL_VERSION) \
-		jekyll serve
+dev: build
+	@docker run --rm -it \
+		-p 8000:8000 \
+		--volume=`pwd`:/usr/src/app/ \
+		buildingbananas/learning-the-sword yarn run develop
 
-deploy:
-	# TODO: move deploy process out of CI specific configuration
-	echo "currently in .travis.yml"
+build-static: build
+	@docker run --rm -it \
+		-p 8000:8000 \
+		--volume=`pwd`:/usr/src/app/ \
+		buildingbananas/learning-the-sword yarn run build
+
+serve: build-static
+	@docker run --rm -it \
+		-p 8000:8000 \
+		--volume=`pwd`:/usr/src/app/ \
+		buildingbananas/learning-the-sword yarn run serve
+
+deploy: build
+	@docker run --rm -it \
+		--volume=`pwd`:/usr/src/app/ \
+		buildingbananas/learning-the-sword yarn run deploy
+
+open:
+	@open http://localhost:8000
