@@ -1,7 +1,7 @@
 ---
-title: Two things are infinite the universe and human stupidity
-subTitle: And I'm not sure about the universe.
-category: "sayings"
+title: Thibault's Distances
+subTitle: Breaking Down The Geometery Into Algebra
+category: "Thibault"
 cover: photo-1490474418585-ba9bad8fd0ea-cover.jpg
 ---
 
