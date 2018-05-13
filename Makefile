@@ -1,28 +1,30 @@
+install:
+	@docker run --rm -it \
+		-p 8000:8000 \
+		--workdir=/usr/src/app/ \
+		--volume=`pwd`:/usr/src/app/ \
+		node:latest yarn install
+
+develop:
+	@docker run --rm -it \
+		-p 8000:8000 \
+		--workdir=/usr/src/app/ \
+		--volume=`pwd`:/usr/src/app/ \
+		node:latest yarn develop-host
+
 build:
-	@docker build -t buildingbananas/learning-the-sword .
-
-dev: build
 	@docker run --rm -it \
 		-p 8000:8000 \
+		--workdir=/usr/src/app/ \
 		--volume=`pwd`:/usr/src/app/ \
-		buildingbananas/learning-the-sword yarn run develop
-
-build-static: build
-	@docker run --rm -it \
-		-p 8000:8000 \
-		--volume=`pwd`:/usr/src/app/ \
-		buildingbananas/learning-the-sword yarn run build
+		node:latest yarn build
 
 serve: build-static
 	@docker run --rm -it \
 		-p 8000:8000 \
+		--workdir=/usr/src/app/ \
 		--volume=`pwd`:/usr/src/app/ \
-		buildingbananas/learning-the-sword yarn run serve
-
-deploy: build
-	@docker run --rm -it \
-		--volume=`pwd`:/usr/src/app/ \
-		buildingbananas/learning-the-sword yarn run deploy
+		node:latest yarn serve
 
 open:
 	@open http://localhost:8000
