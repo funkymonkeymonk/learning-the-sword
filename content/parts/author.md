@@ -2,4 +2,4 @@
 title: author
 ---
 
-**Mr. Gatsby** Proin ornare ligula eu tellus tempus elementum. Aenean [bibendum](/) iaculis mi, nec blandit lacus interdum vitae. Vestibulum non nibh risus, a scelerisque purus. :hearts:
+**Will Weaver** known as in the [SCA](www.sca.org) as [Lord Erich Guter Muth](https://wiki.eastkingdom.org/index.php?title=Erich_Guter_Muth)
