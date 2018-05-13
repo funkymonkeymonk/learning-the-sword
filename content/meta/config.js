@@ -2,7 +2,7 @@ const colors = require("../../src/styles/colors");
 
 module.exports = {
   siteTitle: "LearningTheSword - documenting my study into historical arms", // <title>
-  shortSiteTitle: "PersonalBlog GatsbyJS Starter", // <title> ending for posts and pages
+  shortSiteTitle: "LearningTheSword", // <title> ending for posts and pages
   siteDescription: "LearningTheSword is the historical arms blog for Will Weaver, known in the SCA as Lord Erich Guter Muth.",
   siteUrl: "https://www.learningthesword.com",
   pathPrefix: "",
