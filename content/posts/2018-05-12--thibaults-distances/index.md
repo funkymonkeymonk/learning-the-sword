@@ -1,24 +1,16 @@
 ---
 title: Thibault's Distances
-subTitle: Breaking Down The Geometery Into Algebra
+subTitle: Breaking Down The Geometry Into Algebra
 category: "Thibault"
-cover: photo-1490474418585-ba9bad8fd0ea-cover.jpg
+cover: mysterious-circle-cover.jpg
 ---
 
-Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, [adipiscing](http://google.com) eu pulvinar vel, sodales vitae dui. :thumbsup: :smile: :sparkler:
+One of the things that drew me to Thibault's system was how each action is derived through it's geometric relationships to each component of the fencer and the duel. There is nothing that Thibault says that is not backed up but a relationship, which he carefully builds by observable relationship from the diameter, or the total length of a person from the soles of their feet to the height of the arm outstretched with elbow next to the top of the head. This leads to a system of fighting where each distance is relative only to one variable, the height of the fencer.
 
-Pellentesque sed sapien lorem, at lacinia urna. In hac habitasse platea dictumst. Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum.
+![Mysterious Circle](./mysterious-circle.jpg)
+*Image Public Domain. Source [Wikimedia](https://commons.wikimedia.org/wiki/File:Gerard_Thibault_Mysterious_Circle.jpg)*
 
-Fusce a metus eu diam varius congue nec nec sapien. Vestibulum orci tortor, sollicitudin ac euismod non, placerat ac augue. Nunc convallis accumsan justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec malesuada vehicula lectus, viverra sodales ipsum gravida nec.
+As I dug into the _Academy of the Sword_ I couldn't help myself from having my mind wander to how these relationships plotted into formula's. Since height is the basis of the circle and each intersection is one step, then a formula for the stride of someone at a given height should be attainable. Thankfully Doroga of [Black Birds and Blades](https://blackbirdsandblades.blogspot.com/) pointed me to an amazing article in the [Acta Periodica Duellatorum](https://www.actaperiodicaduellatorum.com/).
 
-> Proin ornare ligula eu tellus tempus elementum. Aenean bibendum iaculis mi, nec blandit lacus interdum vitae. Vestibulum non nibh risus, a scelerisque purus. Ut vel arcu ac tortor adipiscing hendrerit vel sed massa. Fusce sem libero, lacinia vulputate interdum non, porttitor non quam. Aliquam sed felis ligula. Duis non nulla magna.
 
-Nullam eros mi, mollis in sollicitudin non, tincidunt sed enim. Sed et felis metus, rhoncus ornare nibh. Ut at magna leo. Suspendisse egestas est ac dolor imperdiet pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor, erat sit amet venenatis luctus, augue libero ultrices quam, ut congue nisi risus eu purus. Cras semper consectetur elementum.
-
-### Cras semper consectetur elementum
-
-Pellentesque sed sapien lorem, at lacinia urna. In hac habitasse platea dictumst. Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum.
-
-![unsplash.com](./photo-1490474418585-ba9bad8fd0ea.jpg)
-
-Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, bibendum eu pulvinar vel, sodales vitae dui. Pellentesque sed sapien lorem, at lacinia urna. In hac habitasse platea dictumst. Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum.
+> Quoted Text
