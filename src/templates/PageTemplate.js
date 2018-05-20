@@ -58,7 +58,7 @@ export const pageQuery = graphql`
   query PageByPath($slug: String!) {
     page: markdownRemark(fields: { slug: { eq: $slug } }) {
       id
-      html
+      htmlAst
       frontmatter {
         title
       }

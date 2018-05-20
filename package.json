@@ -79,6 +79,7 @@
     "rebound": "^0.1.0",
     "redux": "^3.7.2",
     "redux-devtools-extension": "^2.13.2",
+    "rehype-react": "^3.0.2",
     "screenfull": "^3.3.2"
   }
 }

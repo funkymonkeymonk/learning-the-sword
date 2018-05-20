@@ -92,11 +92,19 @@ const styles = theme => ({
   }
 });
 
-const Content = props => {
-  const { classes, html, children } = props;
+import rehypeReact from "rehype-react";
+import Calculator from "../Calculator";
 
-  if (html) {
-    return <div className={classes.content} dangerouslySetInnerHTML={{ __html: html }} />;
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+  components: { "calculator": Calculator },
+}).Compiler;
+
+const Content = props => {
+  const { classes, htmlAst, children } = props;
+
+  if(htmlAst) {
+    return renderAst(htmlAst);
   } else {
     return <div className={classes.content}>{children}</div>;
   }
@@ -104,7 +112,7 @@ const Content = props => {
 
 Content.propTypes = {
   classes: PropTypes.object.isRequired,
-  html: PropTypes.string,
+  htmlAst: PropTypes.object,
   children: PropTypes.node,
   setFontSizeIncrease: PropTypes.func.isRequired,
   fontSizeIncrease: PropTypes.number.isRequired
