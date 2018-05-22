@@ -1,10 +1,9 @@
 ---
-title: Thibault's Anatomy
+title: Thibault's Distances
+subTitle: Breaking Down The Geometry Into Algebra
 category: "Thibault"
 cover: ../media/covers/mysterious-circle-cover.jpg
 ---
-
-### Background
 
 One of the things that drew me to Thibault's system was how each action is derived through it's geometric relationships to each component of the fencer and the duel. There is nothing that Thibault says that is not backed up but a relationship, which he carefully builds by observable relationship from the diameter, or the total length of a person from the soles of their feet to the height of the arm outstretched with elbow next to the top of the head. This leads to a system of fighting where each distance is relative only to one variable, the height of the fencer.
 
