@@ -1,7 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import injectSheet from "react-jss";
+
 import * as T from "./thibault-math.js"
+
+const styles = theme => ({});
+
 
 const AnatomyRow = props => {
     const { label, calculated, actual } = props;
@@ -10,8 +14,9 @@ const AnatomyRow = props => {
     return (
         <tr>
             <td>{label}</td>
-            <td>{calculated} {unit}</td>
-            <td><input type="text" value={actual}/></td>
+            <td>{calculated}</td>
+            <td>{unit}</td>
+            <td><input type="text" value={actual} size="8" /></td>
             <td>{unit}</td>
         </tr>
     )
@@ -28,7 +33,7 @@ const Anatomy = props => {
             <table>
                 <tr>
                     <th>Measure</th>
-                    <th>Calculated</th>
+                    <th colSpan="2">Calculated</th>
                     <th colSpan="2">Actual</th>
                 </tr>
                 {rows}
@@ -47,4 +52,4 @@ Anatomy.propTypes = {
   ThU: PropTypes.number.isRequired,
 }
 
-export default Anatomy
+export default (injectSheet(styles)(Anatomy))

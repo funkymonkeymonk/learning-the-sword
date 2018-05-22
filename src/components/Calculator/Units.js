@@ -1,7 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import injectSheet from "react-jss";
+
 import * as T from "./thibault-math.js"
+
+const styles = theme => ({});
 
 const UnitRow = props => {
     const { label, calculated} = props;
@@ -24,7 +27,7 @@ const Units = props => {
             <table>
                 <tr>
                     <th>Measure</th>
-                    <th>Calculated</th>
+                    <th colSpan="2">Calculated</th>
                 </tr>
 
                 <UnitRow label="Thibault Unit (ThU)" calculated={T.round2(ThU)} />
@@ -45,4 +48,4 @@ Units.propTypes = {
   ThU: PropTypes.number.isRequired,
 }
 
-export default Units
+export default (injectSheet(styles)(Units))
