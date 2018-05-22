@@ -36,3 +36,6 @@ export const distanceFromSolesOfTheFeetInThU = {
 export const GetThibaultUnitsFromHeight = height => height/19.69;
 export const GetPartFromThU = ThU => ThU/10;
 export const GetMinuteFromThU = ThU => ThU/100;
+
+// TODO: This round method sucks and I need to find a better one
+export const round2 = x => Math.round(x * 100) / 100
