@@ -33,9 +33,11 @@ export const distanceFromSolesOfTheFeetInThU = {
     POINT_C: { loc: "Point C", distance: 0,  desc: "Soles of the feet"},
 }
 
-export const GetThibaultUnitsFromHeight = height => height/19.69;
-export const GetPartFromThU = ThU => ThU/10;
-export const GetMinuteFromThU = ThU => ThU/100;
-
 // TODO: This round method sucks and I need to find a better one
 export const round2 = x => Math.round(x * 100) / 100
+
+export const getDistanceFromSolesOfTheFeet = (loc, ThU) => round2(distanceFromSolesOfTheFeetInThU[loc].distance * ThU);
+
+export const GetThibaultUnitsFromHeight = height => round2(height/distanceFromSolesOfTheFeetInThU['POINT_V'].distance);
+export const GetPartFromThU = ThU => round2(ThU/10);
+export const GetMinuteFromThU = ThU => round2(ThU/100);

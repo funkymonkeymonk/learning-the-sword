@@ -6,7 +6,6 @@ import * as T from "./thibault-math.js"
 
 const styles = theme => ({});
 
-
 const AnatomyRow = props => {
     const { location, description, calculated} = props;
     const unit = props.unit || "cm";
@@ -25,8 +24,9 @@ const AnatomyRow = props => {
 
 const Anatomy = props => {
     const { ThU } = props
-    const values = Object.values(T.distanceFromSolesOfTheFeetInThU)
-    const rows = values.map(v => <AnatomyRow location={v.loc} description={v.desc} calculated={T.round2(v.distance * ThU)} />)
+    const distance = T.distanceFromSolesOfTheFeetInThU
+    const keys = Object.getOwnPropertyNames(distance)
+    const rows = keys.map(k => <AnatomyRow location={distance[k].loc} description={distance[k].desc} calculated={T.getDistanceFromSolesOfTheFeet(k, ThU)} />)
 
     return (
         <div>
@@ -45,7 +45,8 @@ const Anatomy = props => {
 }
 
 AnatomyRow.propTypes = {
-  label: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   calculated: PropTypes.number.isRequired,
   unit: PropTypes.string,
 };

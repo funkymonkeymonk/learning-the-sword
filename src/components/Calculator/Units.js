@@ -30,9 +30,9 @@ const Units = props => {
                     <th colSpan="2">Calculated</th>
                 </tr>
 
-                <UnitRow label="Thibault Unit (ThU)" calculated={T.round2(ThU)} />
-                <UnitRow label="Part" calculated={T.round2(T.GetPartFromThU(ThU))} />
-                <UnitRow label="Minute" calculated={T.round2(T.GetMinuteFromThU(ThU))} />
+                <UnitRow label="Thibault Unit (ThU)" calculated={ThU} />
+                <UnitRow label="Part" calculated={T.GetPartFromThU(ThU)} />
+                <UnitRow label="Minute" calculated={T.GetMinuteFromThU(ThU)} />
             </table>
         </div>
     )
