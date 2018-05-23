@@ -23,14 +23,8 @@ class Calculator extends React.Component {
         return (
             <div>
                 <br />
-                <table>
-                <tr>
-                    <td>Height</td>
-                    <td><input onChange={this.handleChange} type="text" size="8"/></td>
-                    <td>cm</td>
-                </tr>
-                </table>
-
+                <p>Height: <input onChange={this.handleChange} type="text" size="8"/> cm</p>
+                <br />
                 <Units ThU={this.state.ThU} />
                 <br />
                 <Anatomy ThU={this.state.ThU}/>

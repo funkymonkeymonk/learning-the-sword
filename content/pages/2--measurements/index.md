@@ -3,12 +3,6 @@ title: Measurements
 menuTitle: Measurements
 ---
 
-## Thibault's Measurements
-
-Let's break down all of the measurements in The Academy of the Sword.
-
-All values are in centimeters.
-
 <calculator></calculator>
 
 _Source:_
