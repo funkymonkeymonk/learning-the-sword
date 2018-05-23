@@ -12,7 +12,7 @@ module.exports = {
   authorName: "Will Weaver",
   authorTwitterAccount: "buildingbananas",
   // info
-  infoTitle: "Will Weaver",
+  infoTitle: "Learning\nThe Sword",
   infoTitleNote: "",
   // manifest.json
   manifestName: "Learning The Sword - documenting my study into historical arms",
