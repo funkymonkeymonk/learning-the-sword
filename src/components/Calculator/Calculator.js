@@ -3,8 +3,11 @@ import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 
 import * as T from "./thibault-math.js";
-import Anatomy from "./Anatomy.js";
 import Units from "./Units.js";
+import Anatomy from "./Anatomy.js";
+import Sword from "./Sword.js";
+
+// TODO: Create a print button
 
 const styles = theme => ({});
 
@@ -28,6 +31,8 @@ class Calculator extends React.Component {
                 <Units ThU={this.state.ThU} />
                 <br />
                 <Anatomy ThU={this.state.ThU}/>
+                <br />
+                <Sword ThU={this.state.ThU}/>
             </div>
         )
     }

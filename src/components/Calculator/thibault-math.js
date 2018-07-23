@@ -1,5 +1,6 @@
 export const distanceFromSolesOfTheFeetInThU = {
     POINT_X: { loc: "Point X", distance: 24, desc: "Endpoint of finger"},
+    DIAMETER: { loc: "Diameter", distance: 24, desc: "Diameter of the circle"},
     POINT_V: { loc: "Point V", distance: 19.69, desc: "Top of head"},
     LINE_A: { loc: "Line A", distance: 19.243, desc: "Top of the face"},
     LINE_B: { loc: "Line B", distance: 18, desc: "End of nose"},
@@ -41,3 +42,52 @@ export const getDistanceFromSolesOfTheFeet = (loc, ThU) => round2(distanceFromSo
 export const GetThibaultUnitsFromHeight = height => round2(height/distanceFromSolesOfTheFeetInThU['POINT_V'].distance);
 export const GetPartFromThU = ThU => round2(ThU/10);
 export const GetMinuteFromThU = ThU => round2(ThU/100);
+
+const footLine = ThU => round2(2.485 * ThU);
+export const getGripAndPommel = ThU => round2(1.757 * ThU);
+export const getBladeLength = ThU =>  round2(getDistanceFromSolesOfTheFeet('DIAMETER', ThU)/2);
+export const getQuillionLength = ThU => footLine(ThU);
+export const getRicasso = ThU => round2(0.879 * ThU);
+
+
+/*  ARGHHHHH - Going to need to do some serious digging for this maybe one of the other authors can give me some insight.
+Thibault gives the detailed description of the pommel, gives some advice about the grip
+and determines the proper measures of the hanger as well. However, because these
+descriptions are not definitive we neglect to include them in this article, but we hope
+that we will be able to investigate these questions in the future.
+*/
+//export const getGripLength = ThU => ThU // grip = 1/2 hand length = hand width
+//export const getPommelLength = ThU => ThU; // grip = 1/2 hand length = hand width && grip + pommel = 1 hand length ???
+
+// Assumptions
+//      0,0 is the initial point for Adam
+//      the y axis is a line drawn directly between Adam and Zachary
+//      all distances in ThU relative to Adam
+
+// TODO: break down all the locations in the circle by coordinate
+const theCircle = {
+    A: {x: 0, y:0},
+    B: {x: 0, y:0},
+    C: {x: 0, y:0},
+    D: {x: 0, y:0},
+    E: {x: 0, y:0},
+    F: {x: 0, y:0},
+    G: {x: 0, y:0},
+    H: {x: 0, y:0},
+    I: {x: 0, y:0},
+    K: {x: 0, y:0},
+    L: {x: 0, y:0},
+    M: {x: 0, y:0},
+    N: {x: 0, y:0},
+    O: {x: 0, y:0},
+    P: {x: 0, y:0},
+    Q: {x: 0, y:0},
+    R: {x: 0, y:0},
+    S: {x: 0, y:0},
+    T: {x: 0, y:0},
+    V: {x: 0, y:0},
+    W: {x: 0, y:0},
+    X: {x: 0, y:0},
+    Y: {x: 0, y:0},
+    Z: {x: 0, y:0},
+}
