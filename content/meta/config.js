@@ -6,7 +6,7 @@ module.exports = {
   siteDescription: "LearningTheSword is the historical arms blog for Will Weaver, known in the SCA as Lord Erich Guter Muth.",
   siteUrl: "https://www.learningthesword.com",
   pathPrefix: "",
-  siteImage: "https://www.learningthesword.com/preview.jpg",
+  siteImage: "https://www.learningthesword.com/siteImage.jpg",
   siteLanguage: "en",
   // author
   authorName: "Will Weaver",
