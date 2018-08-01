@@ -46,6 +46,7 @@ module.exports = {
     }
   },
   plugins: [
+    `gatsby-plugin-react-next`,
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
@@ -198,9 +199,9 @@ module.exports = {
                     node {
                       excerpt
                       html
-                      fields { 
+                      fields {
                         slug
-                        prefix 
+                        prefix
                       }
                       frontmatter {
                         title
@@ -219,7 +220,10 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`
     },
     {
-      resolve: "gatsby-plugin-svgr"
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        include: /svg-icons/
+      }
     }
   ]
 };

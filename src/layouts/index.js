@@ -1,8 +1,10 @@
 import React from "react";
 import injectSheet from "react-jss";
-import { MuiThemeProvider } from "material-ui/styles";
+import { MuiThemeProvider } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+
+import withRoot from "../withRoot";
 
 import theme from "../styles/theme";
 import globals from "../styles/globals";
@@ -14,6 +16,7 @@ import Loading from "../components/common/Loading/";
 import Navigator from "../components/Navigator/";
 import ActionsBar from "../components/ActionsBar/";
 import InfoBar from "../components/InfoBar/";
+import LayoutWrapper from "../components/LayoutWrapper/";
 
 import { isWideScreen, timeoutThrottlerHandler } from "../utils/helpers";
 
@@ -79,25 +82,13 @@ class Layout extends React.Component {
 
     // TODO: dynamic management of tabindexes for keybord navigation
     return (
-      <MuiThemeProvider theme={theme}>
-        <div
-          style={{
-            padding: "1px",
-            position: "absolute",
-            top: 0,
-            left: 0,
-            bottom: 0,
-            right: 0,
-            overflow: "hidden"
-          }}
-        >
-          {children()}
-          <Navigator posts={data.posts.edges} />
-          <ActionsBar categories={this.categories} />
-          <InfoBar pages={data.pages.edges} parts={data.parts.edges} />
-          {this.props.isWideScreen && <InfoBox pages={data.pages.edges} parts={data.parts.edges} />}
-        </div>
-      </MuiThemeProvider>
+      <LayoutWrapper>
+        {children()}
+        <Navigator posts={data.posts.edges} />
+        <ActionsBar categories={this.categories} />
+        <InfoBar pages={data.pages.edges} parts={data.parts.edges} />
+        {this.props.isWideScreen && <InfoBox pages={data.pages.edges} parts={data.parts.edges} />}
+      </LayoutWrapper>
     );
   }
 }
@@ -124,7 +115,10 @@ const mapDispatchToProps = {
   setFontSizeIncrease
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(injectSheet(globals)(Layout));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withRoot(injectSheet(globals)(Layout)));
 
 //eslint-disable-next-line no-undef
 export const guery = graphql`

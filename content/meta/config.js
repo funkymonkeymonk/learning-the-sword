@@ -18,8 +18,8 @@ module.exports = {
   manifestName: "Learning The Sword - documenting my study into historical arms",
   manifestShortName: "LearnSword", // max 12 characters
   manifestStartUrl: "/",
-  manifestBackgroundColor: colors.bg,
-  manifestThemeColor: colors.bg,
+  manifestBackgroundColor: colors.background,
+  manifestThemeColor: colors.background,
   manifestDisplay: "standalone",
   // social
   authorSocialLinks: [

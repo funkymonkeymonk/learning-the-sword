@@ -1,14 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
-import injectSheet from "react-jss";
-import { MenuItem, MenuList } from "material-ui/Menu";
-import MoreVertIcon from "material-ui-icons/MoreVert";
-import IconButton from "material-ui/IconButton";
 import { Manager, Target, Popper } from "react-popper";
-import ClickAwayListener from "material-ui/utils/ClickAwayListener";
-import Grow from "material-ui/transitions/Grow";
-import Paper from "material-ui/Paper";
 import classNames from "classnames";
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
+import Grow from "@material-ui/core/Grow";
+import IconButton from "@material-ui/core/IconButton";
+import injectSheet from "react-jss";
+import MenuItem from "@material-ui/core/MenuItem";
+import MenuList from "@material-ui/core/MenuList";
+import MoreVertIcon from "@material-ui/icons/MoreVert";
+import Paper from "@material-ui/core/Paper";
+import PropTypes from "prop-types";
+import React from "react";
 
 const styles = theme => ({
   topMenu: {
@@ -99,6 +100,16 @@ class TopMenu extends React.Component {
                         </a>
                       );
                     })}
+                    <a href="/contact/" style={{ display: "block" }}>
+                      <MenuItem
+                        onClick={e => {
+                          this.props.pageLinkOnClick(e);
+                          this.handleClose();
+                        }}
+                      >
+                        Contact
+                      </MenuItem>
+                    </a>
                   </MenuList>
                 </Paper>
               </Grow>

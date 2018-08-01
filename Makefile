@@ -5,6 +5,13 @@ install:
 		--volume=`pwd`:/usr/src/app/ \
 		node:latest yarn install
 
+upgrade:
+	@docker run --rm -it \
+		-p 8000:8000 \
+		--workdir=/usr/src/app/ \
+		--volume=`pwd`:/usr/src/app/ \
+		node:latest yarn upgrade
+
 develop:
 	@docker run --rm -it \
 		-p 8000:8000 \

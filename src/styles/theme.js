@@ -1,4 +1,4 @@
-import { createMuiTheme } from "material-ui/styles";
+import { createMuiTheme } from "@material-ui/core/styles";
 import Color from "color";
 import colors from "./colors";
 
@@ -146,16 +146,14 @@ const theme = createMuiTheme({
   palette: {
     primary: {
       main: colors.accent
+    },
+    action: {
+      hover: "rgba(0, 0, 0, 0.01)"
     }
   },
   typography: {
     fontFamily: `Arial, sans-serif`,
     fontSize: 16
-  },
-  pallete: {
-    action: {
-      hover: "rgba(0, 0, 0, 0.01)"
-    }
   }
 });
 

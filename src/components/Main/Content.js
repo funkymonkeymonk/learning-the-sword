@@ -5,13 +5,20 @@ import { connect } from "react-redux";
 
 import { setFontSizeIncrease } from "../../state/store";
 
+import rehypeReact from "rehype-react";
+import Calculator from "../Calculator";
+
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+  components: { "calculator": Calculator },
+}).Compiler;
+
 const styles = theme => ({
   content: {
     color: theme.main.colors.content,
     fontSize: props => `calc(${theme.main.fonts.content.size}em * ${props.fontSizeIncrease})`,
     lineHeight: theme.main.fonts.content.lineHeight,
     "& a": {
-      borderBottom: `1px solid ${theme.base.colors.link}`,
       color: theme.base.colors.link
     },
     "& .gatsby-highlight": {
@@ -20,10 +27,8 @@ const styles = theme => ({
     "& .gatsby-resp-iframe-wrapper": {
       margin: "2em 0"
     },
-    "& code.language-text": {
-      background: "#f3f3f3",
+    "& code:not(pre)": {
       textShadow: "none",
-      color: "#333",
       padding: ".1em .3em .2em",
       borderRadius: ".1em"
     },
@@ -92,19 +97,13 @@ const styles = theme => ({
   }
 });
 
-import rehypeReact from "rehype-react";
-import Calculator from "../Calculator";
-
-const renderAst = new rehypeReact({
-  createElement: React.createElement,
-  components: { "calculator": Calculator },
-}).Compiler;
-
 const Content = props => {
-  const { classes, htmlAst, children } = props;
+  const { classes, htmlAst, html, children } = props;
 
   if(htmlAst) {
     return renderAst(htmlAst);
+  } else if (html) {
+    return <div className={classes.content} dangerouslySetInnerHTML={{ __html: html }} />;
   } else {
     return <div className={classes.content}>{children}</div>;
   }
@@ -112,7 +111,8 @@ const Content = props => {
 
 Content.propTypes = {
   classes: PropTypes.object.isRequired,
-  htmlAst: PropTypes.object,
+  htmlAst: PropTypes.string,
+  html: PropTypes.string,
   children: PropTypes.node,
   setFontSizeIncrease: PropTypes.func.isRequired,
   fontSizeIncrease: PropTypes.number.isRequired
@@ -128,4 +128,7 @@ const mapDispatchToProps = {
   setFontSizeIncrease
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(injectSheet(styles)(Content));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(injectSheet(styles)(Content));
