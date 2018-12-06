@@ -4,4 +4,5 @@ import Twitter from './Twitter';
 
 export { Facebook, Twitter };
 
-export default SEO;
+const Seo = SEO;
+export default Seo;
