@@ -59,35 +59,17 @@ that we will be able to investigate these questions in the future.
 //export const getGripLength = ThU => ThU // grip = 1/2 hand length = hand width
 //export const getPommelLength = ThU => ThU; // grip = 1/2 hand length = hand width && grip + pommel = 1 hand length ???
 
-// Assumptions
-//      0,0 is the initial point for Adam
-//      the y axis is a line drawn directly between Adam and Zachary
-//      all distances in ThU relative to Adam
 
-// TODO: break down all the locations in the circle by coordinate
-const theCircle = {
-    A: {x: 0, y:0},
-    B: {x: 0, y:0},
-    C: {x: 0, y:0},
-    D: {x: 0, y:0},
-    E: {x: 0, y:0},
-    F: {x: 0, y:0},
-    G: {x: 0, y:0},
-    H: {x: 0, y:0},
-    I: {x: 0, y:0},
-    K: {x: 0, y:0},
-    L: {x: 0, y:0},
-    M: {x: 0, y:0},
-    N: {x: 0, y:0},
-    O: {x: 0, y:0},
-    P: {x: 0, y:0},
-    Q: {x: 0, y:0},
-    R: {x: 0, y:0},
-    S: {x: 0, y:0},
-    T: {x: 0, y:0},
-    V: {x: 0, y:0},
-    W: {x: 0, y:0},
-    X: {x: 0, y:0},
-    Y: {x: 0, y:0},
-    Z: {x: 0, y:0},
-}
+// Footwork and distance
+const getLengthOfFoot = ThU => footLine(ThU);
+const getLinearStep = ThU => round2(7.864 * ThU);
+const getCircularStepToe = ThU => round2(8.485 * ThU);
+const getCircularStepHeel = ThU => round2(8.169 * ThU);
+
+const firstInstance = ThU => getDistanceFromSolesOfTheFeet(DIAMETER,ThU);
+const secondInstanceSquare = ThU => round2(18.97 * ThU);
+const secondInstanceDiameter = ThU => round2(19.69 * ThU);
+const thirdInstanceSquare = ThU => round2(16.97 * ThU);
+const thirdInstanceDiameter = ThU => round2(16 * ThU);
+
+//83 end of page

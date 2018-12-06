@@ -7,7 +7,7 @@ import Units from "./Units.js";
 import Anatomy from "./Anatomy.js";
 import Sword from "./Sword.js";
 
-// TODO: Create a print button
+// TODO: Fix printing by updating the template
 
 const styles = theme => ({});
 
